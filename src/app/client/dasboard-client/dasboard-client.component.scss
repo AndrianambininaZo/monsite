@@ -1,8 +1,35 @@
 .container__dasboard{
     min-height: 80vh;
-    background-color: aqua;
 
     header{
-        display: flex;        
+        display: flex;  
+        .__left {
+            flex: 1;
+        } 
+        .__rigth{
+            
+            .cercle{
+                height: 250px;
+                width: 250px;
+                background-color: blue;
+                border-radius: 50%;
+            }
+            .cercle2{
+                height: 250px;
+                width: 250px;
+                background-color: blue;
+                border-radius: 50%;
+
+            }
+            video{
+                border-radius: 50%;
+                &::-webkit-media-controls-time-remaining-display {
+                    display: none;
+                  }
+                &::-webkit-media-controls-current-time-display {
+                    display: none;
+                  }
+            }            
+        }    
     }
 }
