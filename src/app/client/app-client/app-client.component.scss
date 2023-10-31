@@ -1,0 +1,67 @@
+.appclient__contenair{
+    width: 100%;
+    min-height: 100%;
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        height: 20vh;
+        padding-top: calc(1rem + 0.2vh);
+
+        .mon__arosaina{
+            display: flex;
+            align-items: end;
+            a{
+                font-size: calc(24px + 0.2vw);
+                font-weight: bold;
+                color: blue;
+                cursor: pointer;
+            }
+        }
+
+        .mon__conmpte__menu{
+            display: flex;
+            flex-direction: column;
+            gap: calc(1rem + 0.2vh);
+
+            .mon__sociaux{
+                display: flex;
+                gap: calc(1rem + 0.3vw);
+                button{}
+                .__sociaux{
+                    display: flex;
+                    gap: calc(1rem + 0.2vw);
+                    i{
+                        color: blue;
+                    }
+                }
+            }
+
+            .mon__menu{
+                display: flex;  
+                gap: calc(1rem + 0.3vw);
+                a{
+                    
+                    text-decoration: none;
+                    
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    span{
+                        color: rgb(94, 85, 85);
+                        font-size: calc(14px + 0.2vw);
+                        font-weight: 900;
+
+                    }
+                    i{
+                        color: rgb(248, 197, 129);
+                        font-size: calc(22px + 0.3vw);
+                    }
+                }             
+            }
+        }
+    }
+    main{
+        margin-top: 1rem;
+    }
+}
