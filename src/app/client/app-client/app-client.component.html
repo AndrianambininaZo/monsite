@@ -1,24 +1,137 @@
-<div class="appclient__contenair">
-    <header>
-        <div class="mon__arosaina">
-            <a>AROSAINA</a>
+<div class="app">
+    <!-- footer menu-->
+    <!-- [ngClass]="{'animated-div': !isOpenNav, 'expanded': isOpenNav}"-->
+    <div    [ngClass]="{'animated-div': !isOpenNav, 'expanded': isOpenNav}">
+        <div *ngIf="isOpenNav" class="contenu__menu">
+            <div class="tete_menu">
+                <div  class="tete_arosaina">
+                    <a class="" routerLink="/" for="">Arosaina</a>
+
+                </div>
+                <div class="btn_fermer">
+                    <a (click)="fermerMenu()"><i class="bi bi-x-lg"></i></a>
+                </div>
+            </div>
+            
+            <div class="menu_arosaina">
+               
+                    <div class="menu1">
+                        <div>
+                        <a >A propos</a>
+                        </div>
+                        <div>
+                            <a >Travailler</a>
+                        </div>
+                        <div>
+                            <a href="https://asclepios.arosaina.com/" target="_blank">ascelepios.arosaina.com</a>
+                        </div>
+                        
+                    </div>
+                    <div class="menu1">
+                        <div>
+                            <a href="/vente">Vente</a>
+                        </div>
+                        <div>
+                            <a href="/form">Formation</a>
+                        </div>
+                        <div>
+                            <a href="https://spider.arosaina.com/" target="_blank">spider.arosaina.com</a>
+                        </div>
+                    </div>
+                
+
+            </div>
+
+        </div>        
+    </div>
+
+    <div *ngIf="!isOpenNav" class="appclient__contenair">
+         <!-- chat-->   
+        <div class="isChat" >                      
+            <div class="contenu__chat" *ngIf="isChat">
+                 <!-- header chat-->
+                <div class="contenu__chat__header">
+                    <div class="title__chat">
+                        <span>Message</span>
+                        <span (click)="openChat()" class="i">
+                            <i class="bi bi-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="main__chat">
+                        <p class="isMsgDes">
+                            <span>Salama tompoko! Inona no azo anapina anao</span>
+                        </p>
+                        <p class="isMsgExp">
+                           <span ></span> 
+                        </p>                   
+                    </div> 
+                </div> 
+
+
+                <!-- footer chat-->
+                <div class="contenu__chat__footer">
+                    <form action="">
+                        <input type="text" class="inputChat" placeholder="Aa">
+                        <button type="submit" class="btn btnChatEnvoyer"><i class="bi bi-send"></i></button>
+                    </form>
+                </div>              
+            </div> 
+            <div class="chat__button">
+                <button class="btn btnChat" *ngIf="!isChat" (click)="openChat()"><i class="bi bi-chat-dots"></i></button>  
+                <button *ngIf="showButton" (click)="allerTop()" class="btn btnHaut"><i class="bi bi-arrow-up-square"></i></button>
+            </div>
         </div>
-        <div class="mon__conmpte__menu">
+        <header>        
             <div class="mon__sociaux">
-                <button class="btn btn-sm btn-primary">Compte</button>
-                <div  class="__sociaux">
+                <a routerLink="/connexion" class="btn btn-sm btn-primary"><i class="bi bi-person"></i> Compte</a>
+                <div  class="__sociaux ">
                     <i class="bi bi-facebook"></i>
                     <i class="bi bi-twitter"></i>
                     <i class="bi bi-youtube"></i>
                 </div>
             </div>
-            <div class="mon__menu">
-                <button class="btn btn-secondary">Commencer</button>
-                <a href=""><i class="bi bi-list"></i><span>MENU</span></a>
+            <div class="header">            
+                <div class="mon__arosaina">
+                    <a routerLink="/"><img src="./../../../assets/images/arosaina.png" alt=""></a>
+                </div>
+                <div class="mon__compte__menu">
+                        <button  (click)="openMenu()" class="btn btn_menu"><i class="bi bi-list"></i> <label for="">Menu</label></button>
+                        
+                </div>
             </div>
-        </div>
-    </header>
-    <main>
-        <router-outlet></router-outlet>                
-    </main>
+        </header>
+        <main>
+            <router-outlet></router-outlet>                
+        </main>
+        <footer class="container">      
+                <div class="footer__menu row">
+                    <div class="footer__left col-md-3">
+                        <a routerLink="/">AROSAINA</a>
+                    </div>
+                    <div class="footer__centre col-md-3">
+                        <a >Accueil</a>
+                        <a routerLink="/form">Etudier</a>
+                    </div>
+                    <div class="footer__rigth col-md-3">
+                        <a >A propos</a>
+                        <a>Travailler</a>
+                    </div>
+                </div>
+                <div class="footer__tirer"></div>
+                <div class="isFooter row">
+                    <div class="footer__resrve col-sm-12 col-lg-4 col-md-4">
+                        <span>2023 - Tous droits réservés</span>
+                    </div>
+                    <div class="footer__politique col-sm-12 col-lg-4 col-md-4">
+                        <span>Politique utilisation</span>
+                    </div>
+                    <div class="footer__sociaux col-sm-12 col-lg-4 col-md-4">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                </div>
+        </footer>
+    </div>
 </div>
+

@@ -1,18 +1,57 @@
-<div class="container__dasboard">
-    <header>
-        <div class="__left caroseul">
-            <span>Calandrier</span>
-            <p>Calandrier </p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+<div class="container__dasboard container-fluid">
+    <header class="row">
+      <!-- Cette par left de header il y a une caroseule  -->
+        <div class="__left caroseul col-md-6 col-sm-12">
+          <div class="left__title">
+            <span class="istitle"> {{ animationText }}</span>
+          </div> 
+          <div class="paragraphe">
+              <p class="isP">Faire inscription pour consommer</p>
+              <p>tous le service disponible</p>
+              <a  routerLink="/connexion" class="btn btn-commencer">Commencer</a>
+          </div>           
         </div>
-        <div class="__rigth">
-            <div class="cercle"></div>
-            <video autoplay="true" controls loop [volume]="0">
-                <source src="./../../../assets/images/videos.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la lecture de vidéos.
-              </video>
-              <button ></button>
-            <div class="cercle2"></div>
+        <!-- Cette par rifth de videos il y a une cercle est  videos de presentation -->        
+        <div class="__rigth col-md-6 col-sm-12">
+           <div class="video__style">
+                <div class="cercle"></div>
+                <div class="background-video-container">
+                   <!-- Cette video est lire un fois le page affiche ecrant //mude hide le durer non clicable  -->
+                    <video autoplay loop muted [volume]="0">
+                      <source src="./../../../assets/images/videos.mp4" type="video/mp4" >
+                      Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                    <!-- Ajoutez du contenu HTML supplémentaire ici, par exemple, un texte ou des éléments UI -->
+                  </div>
+                <div class="cercle2"></div>
+           </div>
         </div>
     </header>
+    <main class="container-fluid">
+      <div class="mon__title">
+        <p>Vivre à arosaina, ça vous fait rêver? On vous guide pour faire de ce rêve votre réalité!</p>
+      </div>
+      <div class="row ">
+        <div class="contenu  col-lg-5 col-md-5 col-sm-10">
+          <i class="bi bi-backpack4"></i>
+          <span class="mon__ravail">Travailler</span>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+        <div  class="contenu  col-lg-5 col-md-5 col-sm-11" routerLink="/form">
+          <i class="bi bi-mortarboard-fill"></i>
+          <span class="mon__ravail">Etudier</span>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+        <div class="contenu col-lg-5 col-md-5 col-sm-11">
+          <i class="bi bi-pc-display-horizontal"></i>
+          <span class="mon__ravail">Vivre</span>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+        <div class="contenu  col-lg-5 col-md-5 col-sm-11">
+          <i class="bi bi-backpack4"></i>
+          <span class="mon__ravail">Trailler</span>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+      </div>
+    </main>
 </div>

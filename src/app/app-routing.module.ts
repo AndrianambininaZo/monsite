@@ -3,11 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { TestComponent } from './test/test.component';
 import { AppClientComponent } from './client/app-client/app-client.component';
 import { DasboardClientComponent } from './client/dasboard-client/dasboard-client.component';
+import { ConnexionClientComponent } from './client/connexion-client/connexion-client.component';
+import { FormationComponent } from './client/app-client/formation/formation.component';
 
 const routes: Routes = [
   { path: 'test', component: TestComponent },
-  {path:'',pathMatch:'full',component:AppClientComponent,children:[
-    {path:'',component:DasboardClientComponent}
+  { path: 'connexion', component: ConnexionClientComponent },
+  {path:'',component:AppClientComponent,children:[
+    {path:'',component:DasboardClientComponent},
+    { path: 'form', component: FormationComponent },
   ]}
 
 

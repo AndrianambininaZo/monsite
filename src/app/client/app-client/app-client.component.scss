@@ -1,67 +1,392 @@
-.appclient__contenair{
+.app{
     width: 100%;
-    min-height: 100%;
-    header{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        height: 20vh;
-        padding-top: calc(1rem + 0.2vh);
+    .animated-div {  
+        height: 0vh;
+        transition: height 0.8s ease-in-out; 
+                
+        background-image: url("./../../../assets/images/fondee.png");
+        transition: height 0.8s ease-in-out;
+        background-size: cover;
+    }
+    .expanded {  
+        height: 100vh;        
+        background-image: url("./../../../assets/images/fondee.png");
+        transition: height 0.8s ease-in-out;
+        background-size: cover;
 
-        .mon__arosaina{
-            display: flex;
-            align-items: end;
-            a{
-                font-size: calc(24px + 0.2vw);
-                font-weight: bold;
-                color: blue;
-                cursor: pointer;
+        .contenu__menu{
+            .tete_menu{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                font-size: 35px;
+                .tete_arosaina{
+                    align-items: center;
+                    a{
+                        margin-top: 2rem;
+                        margin-left: 2rem;
+                        font-size: calc(24px + 0.3vw);
+                        text-decoration: none;
+                        color: white;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    }
+                }
+                .btn_fermer{
+                    margin-inline-end: 3rem;
+                    cursor: pointer;
+                   
+                }
+
+            }
+            .menu_arosaina{
+                margin-top: 1rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                
+                .menu1{
+                    a{
+                        color:white;
+                        text-decoration: none;
+                        font-size:calc(20px + 0.3vw);
+                    
+                     &:hover  {
+                        color:  rgb(10, 127, 255);
+                     }
+                    }
+                
+                }
             }
         }
 
-        .mon__conmpte__menu{
+        
+      }
+    .appclient__contenair{
+        width: 100%;
+        position: relative;
+
+        //contenu chat
+        .isChat{
+            position: fixed;
+            z-index: 56666;
+            bottom: 0;
+            right: 0;                       
+            height: auto;
+            width: calc(400px + 0.3vw);
             display: flex;
-            flex-direction: column;
-            gap: calc(1rem + 0.2vh);
+            align-items: end;
+            justify-content: right;
+
+            .chat__button{
+                display: flex;
+                margin-bottom: .3rem;
+                gap: .5rem;
+                .btnChat{
+                    display: flex;
+                    
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: white;
+                    height: 50px;
+                    width: 50px;
+                    box-shadow: 1px 1px 1px 1px white;
+                    i{
+                        color: blue;
+                        font-size: 24px;
+                    }
+                }
+                .btnHaut{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: white;
+                    height: 50px;
+                    width: 50px;
+                    box-shadow: 1px 1px 1px 1px white;
+                    i{
+                        color: blue;
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .contenu__chat{
+                flex: 1;
+                margin-right: .5rem;
+                background-color: white;
+                box-shadow: 2px 2px 2px 2px gray;
+                margin-bottom: .5rem;
+                border-radius: 10px;
+                height:calc(350px + 1.5vh);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                //contenu chat
+                .contenu__chat__header{
+
+                    .title__chat{
+                        border-bottom: solid 1px gray;
+                        padding: .4rem;
+                        display: flex;
+                        justify-content: space-between;
+                        .i{
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;                           
+                            
+                            border-radius: 50%;
+                            height:calc(24px + 0.3vw) ;
+                            width: calc(24px + 0.3vw);
+                            &:hover{
+                                background-color: gainsboro;
+                            }
+                        }
+                    }
+                    .main__chat{
+                        margin-top: .7rem;
+                        display: flex;
+                        flex-direction: column;
+                        .isMsgDes{
+                            width: 60%;
+                            display: flex;
+                            justify-content: left; 
+                                                   
+                            span{
+                                background-color: gray;
+                                border-radius: 15px;
+                                padding: .5rem;
+                                margin-left: .3rem;
+                                
+                            }
+                        }
+                        .isMsgExp{
+                            width: 100%;
+                            display: flex;
+                            justify-content: right;
+                            
+                            span{
+                                background-color: blue;
+                                border-radius: 15px;
+                                padding: .5rem;
+                                margin-right: .2rem;
+                            }                        
+                        }
+                    }
+                }
+
+                //footer ou forme chat
+                .contenu__chat__footer{
+                    
+                    width: 100%;
+                    form{
+                        display: flex;
+                        align-items: center;
+                        margin-left: .5rem;
+                        .inputChat{
+                            border: none;
+                            background-color: rgb(216, 213, 213);
+                            outline: none;
+                            border-radius: 10px 0 0 10px;
+                            flex: 1;
+                            height: 40px;
+                        }
+                        .btnChatEnvoyer{
+                            i{
+                                font-size: 40px;
+                            }
+                        }
+
+                    }
+                    
+                }
+                
+            }
+        }
+
+
+
+        header{
+            background-color: white;
 
             .mon__sociaux{
                 display: flex;
                 gap: calc(1rem + 0.3vw);
+                justify-content: right;
+                padding: .5rem;
                 button{}
                 .__sociaux{
                     display: flex;
                     gap: calc(1rem + 0.2vw);
                     i{
                         color: blue;
+                        cursor: pointer;
+                        font-size: calc(16px + 0.2vw);
                     }
                 }
             }
 
-            .mon__menu{
-                display: flex;  
-                gap: calc(1rem + 0.3vw);
-                a{
-                    
-                    text-decoration: none;
-                    
-                    display: flex;
-                    align-items: center;
-                    gap: .5rem;
-                    span{
-                        color: rgb(94, 85, 85);
-                        font-size: calc(14px + 0.2vw);
-                        font-weight: 900;
-
+            .header{
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                padding-top: calc(1rem + 0.2vh);        
+                .mon__arosaina{
+                    a{
+                        text-decoration: none;
+                        font-size: calc(24px + 0.2vw);
+                        font-weight: bold;
+                        color: blue;
+                        cursor: pointer;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                     }
-                    i{
-                        color: rgb(248, 197, 129);
+                }
+        
+                .mon__compte__menu{
+                    .btn_menu{
+                        color: burlywood;
+                        cursor: pointer;
                         font-size: calc(22px + 0.3vw);
+                        label{
+                            color: rgb(61, 52, 52);
+                            cursor: pointer;
+                            font-size: calc(18px + 0.3vw);
+                        }
                     }
-                }             
+            
+                    .bbbt {
+                        cursor: pointer;
+                        color: blue;
+                    }
+
+
+                }
+            }
+    
+        }
+        
+        main{
+            margin-top: 1rem;
+        }
+        footer{
+            margin-top: 1rem;
+            padding-bottom: 1.4rem;
+            .footer__menu{
+                display: flex;
+                justify-content: space-evenly;
+                .footer__left{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    margin-top: 1rem;
+                    a{
+                        text-decoration: none;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                        font-size: calc(18px + 0.3vw);
+                    }
+                    button{
+                        background-color: aquamarine;
+                        width: 200px;
+                        height: 50px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                }
+                .footer__centre{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: right;
+                    gap: .7rem;
+                    margin-top: 1rem;
+                    a{
+                        text-decoration: none;
+                        font-size: calc(16px + 0.3vw);
+                        cursor: pointer;
+                        color: black;
+                        &:hover{
+                            color: rgb(150, 150, 230);
+                            
+                        }
+                    }
+                }
+                .footer__rigth{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: right;
+                    gap: .7rem;
+                    margin-top: 1rem;
+                    a{
+                        text-decoration: none;
+                        font-size: calc(16px + 0.3vw);
+                        cursor: pointer;
+                        &:hover{
+                            color: rgb(150, 150, 230);
+                        }
+                    }
+                }
+                
+            }
+            .footer__tirer{
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+                content: '';
+                height: 1.3px;
+                width: 100%;
+                background-color: gray;
+            }
+            .isFooter{
+                display: flex;
+                justify-content: space-between;
+                .footer__resrve{
+                    margin-top: 1rem;
+                    span{
+                        font-size: calc(14px + 0.2vw); 
+                        font-weight: 700; 
+                        color: rgb(75, 68, 68); 
+                    }
+                }
+                .footer__politique{
+                    margin-top: 1rem;
+                   span{
+                    font-size: calc(14px + 0.2vw); 
+                    font-weight: 700; 
+                    color: rgb(75, 68, 68); 
+                   }             
+                }
+                .footer__sociaux{
+                    margin-top: 1rem;
+                    display: flex;
+                    gap: 1rem;
+                    i{
+                        color: blue;
+                        font-size: calc(20px + 0.3vw);
+                        cursor: pointer;
+                    }
+                }
             }
         }
+       
     }
-    main{
-        margin-top: 1rem;
+}
+@media screen and(max-width:900px) {
+    .menu_arosaina{
+        flex-direction: column;
+        margin-left: 3rem;
     }
+    
+    
+}
+@media screen and(max-width:700px) {
+    .btn_menu{
+        label{
+            display: none;
+        }
+    }
+    
 }

@@ -13,6 +13,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { TestComponent } from './test/test.component';
 import { AppClientComponent } from './client/app-client/app-client.component';
 import { DasboardClientComponent } from './client/dasboard-client/dasboard-client.component';
+import { ConnexionClientComponent } from './client/connexion-client/connexion-client.component';
+import { TravailComponent } from './client/app-client/travail/travail.component';
+import { FormationComponent } from './client/app-client/formation/formation.component';
+import { VenteComponent } from './client/app-client/vente/vente.component';
 
 
 @NgModule({
@@ -20,7 +24,11 @@ import { DasboardClientComponent } from './client/dasboard-client/dasboard-clien
     AppComponent,
     AppClientComponent,
     TestComponent,
-    DasboardClientComponent
+    DasboardClientComponent,
+    ConnexionClientComponent,
+    TravailComponent,
+    FormationComponent,
+    VenteComponent
   ],
   imports: [
     BrowserModule,

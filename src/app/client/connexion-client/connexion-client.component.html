@@ -1,0 +1,55 @@
+<div class="connexion__container">
+    <main *ngIf="!isCompte">
+        <div class="connexion__header">
+            <span>Arosaina</span>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="Label">Email:</label>
+                <input type="text" class="form-control" placeholder="Votre email">
+            </div>
+            <div class="form-group">
+                <label for="Label">Password:</label>
+                <input type="text" class="form-control" placeholder="Votre passe word">
+            </div>
+            <div class="button">
+                <button class="btn btn-primary">Enregister</button>
+            </div>
+        </form>
+        <div class="tirer">
+        </div>
+        <button (click)="creerCompte()" class="btn btn__creer">Créer nouveau compte</button>
+    </main>
+    <div *ngIf="isCompte" class="inscription">
+        <div class="inscription__header">
+            <span>S’inscrire</span>
+        </div>
+        <form>
+            <div class="form-group__nom">
+                <input type="text" class="form-control" placeholder="Prenom">
+                <input type="text" class="form-control" placeholder="Nom de famille">
+            </div>
+            <div class="form-group__nom">
+                <input type="text" class="form-control" placeholder="Adresse">
+                <input type="text" class="form-control" placeholder="Telephone">
+            </div>
+            <div class="form-group">
+                <label for="">Genre</label>
+                <select name="" id="" class="form-select">
+                    <option value="femme">Femme</option>
+                    <option value="homme">Homme</option>
+                    <option value="personnalisse">Personnalisé</option>
+                </select>               
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Votre email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Votre passe word">
+            </div>
+            <div class="button">
+                <button class="btn btn-primary">S’inscrire</button>
+            </div>
+        </form>
+    </div>
+</div>

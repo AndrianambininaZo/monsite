@@ -7,6 +7,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class TestComponent implements OnInit {
   @ViewChild('fileInput') fileInput!: ElementRef;
+  text:string="salut"
+  animatedText = '';
 
   constructor() { }
 
@@ -23,6 +25,27 @@ export class TestComponent implements OnInit {
       // Vous pouvez faire quelque chose avec le fichier ici, par exemple l'envoyer à un serveur.
       console.log('Fichier sélectionné :', file);
     }
+  }
+  animateText() {
+    const textLength = this.text.length;
+    let currentIndex = 0;
+    let reverse = false;
+
+     setInterval(() => {
+      if (currentIndex === textLength) {
+        reverse = true;
+      } else if (currentIndex === 0) {
+        reverse = false;
+      }
+
+      this.animatedText = this.text.substring(0, currentIndex);
+
+      if (!reverse) {
+        currentIndex++;
+      } else {
+        currentIndex--;
+      }
+    }, 250);
   }
 
 }

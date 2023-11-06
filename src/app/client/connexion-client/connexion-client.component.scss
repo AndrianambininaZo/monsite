@@ -1,0 +1,114 @@
+.connexion__container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    main{
+        padding-top: 1rem;
+        padding-bottom: 1rem; 
+        box-shadow: 3px 3px 3px 3px gray; 
+        border-radius: 12px;
+        padding:1rem ;   
+        .connexion__header{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            span{
+                font-size: calc(24px + 0.3vw);
+                color: rgb(175, 169, 169);
+                font-weight: 800;
+            }
+        }
+        form{
+            .form-group{
+                padding-bottom: 1rem;
+                label{
+                    font-size: calc(16px + 0.3vw);
+                }
+                input{
+                    width: calc(430px + 0.3vw);
+                    height: calc(45px + 0.3vw);
+                }
+            }
+            .button{
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+                button{
+                    width: 100%;
+                    font-weight: bold;
+                    height: calc(45px + 0.3vw);
+                }
+            }
+        }
+        .tirer{
+            display: flex;
+            margin-left: 10%;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            content: '';
+            height: 1px;
+            width: 80%;
+            background-color: gray;
+        }
+        .btn__creer{
+            width: calc(430px + 0.3vw);
+            height: calc(45px + 0.3vw);
+            background-color: green;
+            width: 60%; 
+            margin-left: 20%; 
+            color: white;
+            font-weight: 800;         
+        }
+    }
+
+    .inscription{
+        padding-top: 1rem;
+        padding-bottom: 1rem; 
+        box-shadow: 3px 3px 3px 3px gray; 
+        border-radius: 12px;
+        padding:1rem ;  
+        .inscription__header{
+            border-bottom: solid 1px gray;
+            margin-bottom: 1rem;
+            span{
+                font-size: calc(24px + 0.3vw);
+                font-weight: bold;
+            }            
+        }  
+        form{
+            .form-group__nom{
+                display: flex;
+                gap: 1rem;
+                padding-bottom: 1rem;
+                input{
+                    height: calc(45px + 0.3vw);
+                }
+
+            }
+            .form-group{
+                gap: 1rem;
+                padding-bottom: 1rem;
+                input{
+                    height: calc(45px + 0.3vw);
+                }
+                select{
+                    height: calc(45px + 0.3vw);
+                    width: 100%;                    
+                }
+            }
+            .button{
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+                button{
+                    width: 100%;
+                    font-weight: bold;
+                    height: calc(45px + 0.3vw);
+                    background-color: green;
+                }
+            }
+        }     
+    }
+}
